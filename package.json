@@ -1,0 +1,70 @@
+{
+    "name": "vscode-edu-module-peek",
+    "displayName": "Edu Module Peek",
+    "description": "faster peek to edu module",
+    "version": "0.0.3",
+    "publisher": "nedu",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "icon": "images/icon.png",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/techbirds/vscode-edu-module-peek.git"
+    },
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [],
+        "configuration": {
+            "type": "object",
+            "title": "File Peek extension configuration",
+            "properties": {
+                "module_peek.activeLanguages": {
+                    "type": "array",
+                    "default": [
+                        "typescript",
+                        "javascript",
+                        "python"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of vscode language names where the extension should be used."
+                },
+                "module_peek.searchFileExtensions": {
+                    "type": "array",
+                    "default": [".js", ".ts", ".html", ".css", ".scss"],
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of extensions that should be tried for finding peeked files.  These are tried in order as further extensions of the potential file name and also as alternative file endings instead of the existing file extension (if available)."
+                },
+                "module_peek.mappings": {
+                    "type": "object",
+                    "default": {
+                    },
+                    "description": "Mappings for paths"
+                  }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
