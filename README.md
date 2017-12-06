@@ -13,11 +13,27 @@
 
 > 智能识别特殊路径标识前缀.
 
+
+### Mac 
+
 ```javascript
 {
 	"module_peek.mappings": {
             "pool":"${workspaceRoot}/src/javascript/lib",
             "nej": "${workspaceRoot}/src/javascript/lib/nej/src",
+            "text!":"",
+            "css!": ""
+	}
+}
+```
+
+### Windows
+
+```javascript
+{
+	"module_peek.mappings": {
+            "pool":"${workspaceRoot}\\src\\javascript\\lib",
+            "nej": "${workspaceRoot}\\src\\javascript\\lib\\nej\\src",
             "text!":"",
             "css!": ""
 	}
