@@ -19,7 +19,7 @@
 ```javascript
 {
 	"module_peek.mappings": {
-            "pool":"${workspaceRoot}/src/javascript/lib",
+            "pool":"${workspaceRoot}/src/javascript/lib", 
             "nej": "${workspaceRoot}/src/javascript/lib/nej/src",
             "text!":"",
             "css!": ""
@@ -39,6 +39,8 @@
 	}
 }
 ```
+
+注: 这里`pool`是我本人项目中组件池目录，这因项目不同而不同。
 
 ## 使用
 
